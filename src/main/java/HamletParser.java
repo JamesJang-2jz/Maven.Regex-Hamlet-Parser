@@ -6,7 +6,6 @@ import java.util.Scanner;
  * Created by thook on 10/7/15.
  */
 public class HamletParser {
-
     private String hamletData;
 
     public HamletParser(){
@@ -33,7 +32,13 @@ public class HamletParser {
     }
 
     public String getHamletData(){
+
         return hamletData;
     }
 
+    public void changeHamletToLeon() {
+    }
+
+    public void changeHoratioToTariq() {
+    }
 }
