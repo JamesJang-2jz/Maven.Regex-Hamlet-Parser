@@ -1,4 +1,4 @@
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+//import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,20 +21,22 @@ public class HamletParserTest {
     @Test
     public void testChangeHamletToLeon() {
         // Given
-        Pattern pattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(hamletText);
-        // When
         hamletParser.changeHamletToLeon();
+        Pattern pattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(hamletParser.getHamletData());
+        // When
+//        String hamlet = hamletParser.getHamletData();
         // Then
         Assert.assertFalse(matcher.find());
     }
     @Test
     public void testChangeHoratioToTariq() {
         // Given
-        Pattern pattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(hamletText);
-        // When
         hamletParser.changeHoratioToTariq();
+        Pattern pattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(hamletParser.getHamletData());
+        // When
+
         // Then
         Assert.assertFalse(matcher.find());
     }
@@ -44,11 +46,11 @@ public class HamletParserTest {
         // Given
         Pattern pattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(hamletText);
-        int expected = 0;
+        int expected = 158;
         // When
         int actual = hamletParser.findHoratio();
         // Then
-        Assert.assertEquals();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -56,11 +58,11 @@ public class HamletParserTest {
         // Given
         Pattern pattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(hamletText);
-        int expected = 0;
+        int expected = 472;
         // When
         int actual = hamletParser.findHamlet();
         // Then
-
+        Assert.assertEquals(expected, actual);
     }
 
 }
