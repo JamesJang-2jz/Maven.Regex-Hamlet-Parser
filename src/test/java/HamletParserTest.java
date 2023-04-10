@@ -44,8 +44,8 @@ public class HamletParserTest {
     @Test
     public void testFindHoratio() {
         // Given
-        Pattern pattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(hamletText);
+//        Pattern pattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
+//        Matcher matcher = pattern.matcher(hamletText);
         int expected = 158;
         // When
         int actual = hamletParser.findHoratio();
@@ -56,8 +56,8 @@ public class HamletParserTest {
     @Test
     public void testFindHamlet() {
         // Given
-        Pattern pattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(hamletText);
+//        Pattern pattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
+//        Matcher matcher = pattern.matcher(hamletText);
         int expected = 472;
         // When
         int actual = hamletParser.findHamlet();

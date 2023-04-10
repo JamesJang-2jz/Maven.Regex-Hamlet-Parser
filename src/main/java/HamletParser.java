@@ -83,23 +83,28 @@ public class HamletParser {
         matcher.appendTail(sb);
         hamletData = sb.toString();
     }
+    public void changePattern(String find, String replacer){
+
+    }
 
     public int findHoratio() {
-        Pattern hamletPattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = hamletPattern.matcher(hamletData);
-        int count = 0;
-        while (matcher.find()){
-            count++;
-        }
-        return count;
+        return (int) Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE).matcher(hamletData).results().count();
+//        Pattern hamletPattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
+//        Matcher matcher = hamletPattern.matcher(hamletData);
+//        int count = 0;
+//        while (matcher.find()){
+//            count++;
+//        }
+//        return count;
     }
     public int findHamlet() {
-        Pattern hamletPattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = hamletPattern.matcher(hamletData);
-        int count = 0;
-        while (matcher.find()){
-            count++;
-        }
-        return count;
+        return (int) Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE).matcher(hamletData).results().count();
+//        Pattern hamletPattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
+//        Matcher matcher = hamletPattern.matcher(hamletData);
+//        int count = 0;
+//        while (matcher.find()){
+//            count++;
+//        }
+//        return count;
     }
 }
